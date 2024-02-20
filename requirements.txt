@@ -1,0 +1,14 @@
+numpy
+scipy
+matplotlib
+jax
+jaxlib
+jaxopt
+flax
+scikit-learn
+pytest
+optax
+blackjax==1.0.0
+pandas
+xlrd
+openpyxl
