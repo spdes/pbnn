@@ -52,7 +52,7 @@ class OneDimGaussBern(DataSet):
         r"""p(\theta | Y_{1:n})
         """
         us = jnp.exp(jax.vmap(lambda x: self.unnormalised_log_posterior(x), in_axes=[0])(theta_grids))
-        z = jnp.trapz(us[:, 0], theta_grids)
+        z = jax.scipy.integrate.trapezoid(us[:, 0], theta_grids)
         return us / z
 
 

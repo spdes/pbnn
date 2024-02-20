@@ -1,4 +1,3 @@
-import pytest
 import jax
 import jax.numpy as jnp
 import numpy as np
@@ -21,7 +20,7 @@ class TestUtils:
 
         # Test pdf
         xs = jnp.linspace(-5, 5, 1000)
-        npt.assert_allclose(jnp.trapz(gs.pdf(xs) * xs, xs), jnp.dot(weights, means))
+        npt.assert_allclose(jax.scipy.integrate.trapezoid(gs.pdf(xs) * xs, xs), jnp.dot(weights, means))
 
         # Test sampling
         key = jax.random.PRNGKey(666)

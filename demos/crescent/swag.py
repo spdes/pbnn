@@ -1,7 +1,7 @@
 """
 Parameter estimation and posterior computation on the crescent model.
 
-Using SWAG.
+Using SWAG. Implementation by Sebastian.
 """
 import jax
 import jax.numpy as jnp
