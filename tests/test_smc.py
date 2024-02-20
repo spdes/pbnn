@@ -6,10 +6,9 @@ import numpy.testing as npt
 from pbnn.solvers.smc import smc_kernel, smc_kernel_log, smc
 from pbnn.solvers.resampling import systematic, multinomial, stratified, det_resampling
 from pbnn.markov_kernels.base import make_pbnn_langevin
-from jax.config import config
 from functools import partial
 
-config.update("jax_enable_x64", True)
+jax.config.update("jax_enable_x64", True)
 
 
 class TestSMCKernel:

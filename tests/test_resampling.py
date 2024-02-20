@@ -4,10 +4,9 @@ import jax.numpy as jnp
 import numpy as np
 import numpy.testing as npt
 from pbnn.solvers.resampling import systematic, stratified, sinkhorn, det_resampling
-from jax.config import config
 from functools import partial
 
-config.update("jax_enable_x64", True)
+jax.config.update("jax_enable_x64", True)
 np.random.seed(666)
 
 

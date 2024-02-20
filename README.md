@@ -5,6 +5,7 @@ TL;DR
 - What is a partial Bayesian neural network (pBNN)? It is a type of neural network ``between a conventional neural network and a Bayesian neural network''. More precisely, it is a neural network with a subset of its weights being stochastic.
 - How to train pBNNs? It's almost a standard latent variable model, hence any method for such a model applies.
 - We represent the training via a Feynman--Kac formalism and use sequential Monte Carlo (SMC) samplers to 1) approximate the posterior distribution and 2) compute the deterministic weights of the pBNN. Note that the SMC samplers we use are not standard, but are modified for the pBNN training.
+- Pros and cons? It's a Monte Carlo method and is scalable for large neural networks and datasets. However, it is biased with a possibility to debias.
 
 The manuscript is accepted for AISTATS 2024, and you can also find the preprint at [arXiv](https://arxiv.org/abs/2310.19608).
 
@@ -44,4 +45,4 @@ To cite our work, please use the following BibTeX entry.
 ```
 
 # Contact
-Zheng Zhao (you can find my email in my website)
+Zheng Zhao, [https://zz.zabemon.com](https://zz.zabemon.com).

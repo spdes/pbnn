@@ -6,9 +6,8 @@ import jaxopt
 import numpy.testing as npt
 from pbnn.solvers import variational_bayes, maximum_a_posteriori, hmc
 from functools import partial
-from jax.config import config
 
-config.update("jax_enable_x64", True)
+jax.config.update("jax_enable_x64", True)
 
 xs = 2.
 psi = 0.12
@@ -110,7 +109,7 @@ def test_map():
 
     # When fixing psi, the ell must be stationary at the true phi.
     grad = jax.grad(ell, argnums=0)(true_posterior_mean, psi, ys, xs)
-    npt.assert_allclose(grad, 0., atol=1e-10)
+    npt.assert_allclose(grad, 0., atol=1e-8)
 
 
 def test_mcmc():

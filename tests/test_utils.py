@@ -3,9 +3,8 @@ import jax.numpy as jnp
 import numpy as np
 import numpy.testing as npt
 from pbnn.utils import GaussianSum1D, GaussianSumND, nlpd_mc, nlpd_mc_seq, accuracy
-from jax.config import config
 
-config.update("jax_enable_x64", True)
+jax.config.update("jax_enable_x64", True)
 np.random.seed(666)
 
 
