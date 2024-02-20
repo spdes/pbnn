@@ -40,3 +40,6 @@ To cite our work, please use the following BibTeX entry.
   publisher = {PMLR},
 }
 ```
+
+# Contact
+Zheng Zhao (you can find my email in my website)
