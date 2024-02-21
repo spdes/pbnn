@@ -1,4 +1,5 @@
 # Training partial Bayesian neural networks with sequential Monte Carlo samplers
+[![UnitTest](https://github.com/spdes/pbnn/actions/workflows/unittest.yml/badge.svg)](https://github.com/spdes/pbnn/actions/workflows/unittest.yml)
 
 TL;DR
 
